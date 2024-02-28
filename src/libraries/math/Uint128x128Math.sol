@@ -3,7 +3,7 @@
 pragma solidity ^0.8.10;
 
 import {Constants} from "../Constants.sol";
-import {BitMath} from "./BitMath.sol";
+import {BitMath} from "../math/BitMath.sol"; //MODIFIED cause bug
 
 /**
  * @title Liquidity Book Uint128x128 Math Library
