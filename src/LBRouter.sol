@@ -2,7 +2,8 @@
 
 pragma solidity 0.8.10;
 
-import {IERC20} from "openzeppelin/token/ERC20/IERC20.sol";
+//import {IERC20} from "openzeppelin/token/ERC20/IERC20.sol"; // BEFORE
+import {IERC20} from "./interfaces/IERC20.sol";
 
 import {BinHelper} from "./libraries/BinHelper.sol";
 import {Constants} from "./libraries/Constants.sol";
