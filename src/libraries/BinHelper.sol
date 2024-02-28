@@ -2,7 +2,8 @@
 
 pragma solidity ^0.8.10;
 
-import {IERC20} from "openzeppelin/token/ERC20/IERC20.sol";
+//import {IERC20} from "openzeppelin/token/ERC20/IERC20.sol"; // ORIGINAL
+import {IERC20} from "././interfaces/IERC20.sol"; // MODIFIED PATH
 
 import {PackedUint128Math} from "./math/PackedUint128Math.sol";
 import {Uint256x256Math} from "./math/Uint256x256Math.sol";
