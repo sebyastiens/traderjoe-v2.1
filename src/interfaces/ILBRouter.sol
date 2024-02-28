@@ -2,8 +2,8 @@
 
 pragma solidity ^0.8.10;
 
-import {IERC20} from "openzeppelin/token/ERC20/IERC20.sol";
-
+//import {IERC20} from "openzeppelin/token/ERC20/IERC20.sol"; // ORIGINAL
+import {IERC20} from "./IERC20.sol"; // MODIFIED PATH
 import {IJoeFactory} from "./IJoeFactory.sol";
 import {ILBFactory} from "./ILBFactory.sol";
 import {ILBLegacyFactory} from "./ILBLegacyFactory.sol";
