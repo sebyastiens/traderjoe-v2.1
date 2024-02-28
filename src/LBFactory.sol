@@ -4,7 +4,8 @@ pragma solidity 0.8.10;
 
 import {EnumerableSet} from "openzeppelin/utils/structs/EnumerableSet.sol";
 import {EnumerableMap} from "openzeppelin/utils/structs/EnumerableMap.sol";
-import {IERC20} from "openzeppelin/token/ERC20/IERC20.sol";
+//import {IERC20} from "openzeppelin/token/ERC20/IERC20.sol"; // ORIGINAL
+import {IERC20} from "./interfaces/IERC20.sol"; // MODIFIED PATH
 
 import {PairParameterHelper} from "./libraries/PairParameterHelper.sol";
 import {Encoded} from "./libraries/math/Encoded.sol";
