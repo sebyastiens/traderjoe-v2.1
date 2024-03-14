@@ -164,9 +164,9 @@ contract LBRouter is ILBRouter {
         public
         view
         override
-        returns (uint128 amountIn, uint128 amountOutLeft, uint128 fee)
+        returns (uint128 amountIn, uint128 amountOutLeft, uint128 fee,uint24 id)
     {
-        (amountIn, amountOutLeft, fee) = pair.getSwapIn(amountOut, swapForY);
+        (amountIn, amountOutLeft, fee, id) = pair.getSwapIn(amountOut, swapForY);
     }
 
     /**
@@ -182,9 +182,9 @@ contract LBRouter is ILBRouter {
         external
         view
         override
-        returns (uint128 amountInLeft, uint128 amountOut, uint128 fee)
+        returns (uint128 amountInLeft, uint128 amountOut, uint128 fee, uint24 id)
     {
-        (amountInLeft, amountOut, fee) = pair.getSwapOut(amountIn, swapForY);
+        (amountInLeft, amountOut, fee, id) = pair.getSwapOut(amountIn, swapForY);
     }
 
     /**
