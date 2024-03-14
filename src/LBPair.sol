@@ -365,14 +365,14 @@ contract LBPair is LBToken, ReentrancyGuard, Clone, ILBPair {
         external
         view
         override
-        returns (uint128 amountIn, uint128 amountOutLeft, uint128 fee)
+        returns (uint128 amountIn, uint128 amountOutLeft, uint128 fee, uint24 id) // J'ajoute le return de l'id qui permet de calculer le prix fin de la simulation
     {
         amountOutLeft = amountOut;
 
         bytes32 parameters = _parameters;
         uint16 binStep = _binStep();
 
-        uint24 id = parameters.getActiveId();
+        id = parameters.getActiveId();
 
         parameters = parameters.updateReferences(block.timestamp);
 
@@ -426,14 +426,14 @@ contract LBPair is LBToken, ReentrancyGuard, Clone, ILBPair {
         external
         view
         override
-        returns (uint128 amountInLeft, uint128 amountOut, uint128 fee)
+        returns (uint128 amountInLeft, uint128 amountOut, uint128 fee, uint24 id) // J'ajoute le return de l'id qui permet de calculer le prix fin de la simulation
     {
         bytes32 amountsInLeft = amountIn.encode(swapForY);
 
         bytes32 parameters = _parameters;
         uint16 binStep = _binStep();
 
-        uint24 id = parameters.getActiveId();
+        id = parameters.getActiveId();
 
         parameters = parameters.updateReferences(block.timestamp);
 
