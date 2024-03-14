@@ -120,12 +120,12 @@ interface ILBRouter {
     function getSwapIn(ILBPair LBPair, uint128 amountOut, bool swapForY)
         external
         view
-        returns (uint128 amountIn, uint128 amountOutLeft, uint128 fee);
+        returns (uint128 amountIn, uint128 amountOutLeft, uint128 fee, uint24 id);
 
     function getSwapOut(ILBPair LBPair, uint128 amountIn, bool swapForY)
         external
         view
-        returns (uint128 amountInLeft, uint128 amountOut, uint128 fee);
+        returns (uint128 amountInLeft, uint128 amountOut, uint128 fee, uint24 id);
 
     function createLBPair(IERC20 tokenX, IERC20 tokenY, uint24 activeId, uint16 binStep)
         external
